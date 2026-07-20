@@ -34,15 +34,19 @@
   a:hover { color: var(--cc-cta, #B4552D); }
   ::selection { background: color-mix(in oklab, var(--cc-glacier, #7FA6B3) 35%, transparent); }
   html { scroll-behavior: smooth; }
+  @media (max-width: 640px) {
+    .cc-nav { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; padding: 20px 20px !important; }
+    .cc-nav-links { gap: 16px !important; row-gap: 10px !important; }
+  }
 </style>
 </helmet>
 
 <div style="min-width: 320px; background: var(--cc-paper, #F6F3EC); overflow: hidden">
 
   <!-- NAV -->
-  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1040px; margin: 0 auto; padding: 28px 32px; font-family: var(--cc-mono, 'IBM Plex Mono'), monospace; font-size: 12px; letter-spacing: .08em">
+  <nav class="cc-nav" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1040px; margin: 0 auto; padding: 28px 32px; font-family: var(--cc-mono, 'IBM Plex Mono'), monospace; font-size: 12px; letter-spacing: .08em">
     <a href="#top" style="text-decoration: none; color: var(--cc-ink, #22352B); font-weight: 500">CC</a>
-    <div style="display: flex; gap: 28px; flex-wrap: wrap">
+    <div class="cc-nav-links" style="display: flex; gap: 28px; flex-wrap: wrap">
       <a href="#about" style="text-decoration: none; color: var(--cc-muted, #5E6862)">ABOUT</a>
       <a href="#work" style="text-decoration: none; color: var(--cc-muted, #5E6862)">WORK</a>
       <a href="#apps" style="text-decoration: none; color: var(--cc-muted, #5E6862)">APPS</a>
